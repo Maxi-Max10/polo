@@ -1,12 +1,7 @@
 
 
 RewriteEngine On 
-RewriteRule ^index$ index.php
-RewriteRule ^about$ about.php
-RewriteRule ^service$ service.php 
-RewriteRule ^contact$ contact.php
-RewriteRule ^team$ team.php
-RewriteRule ^project$ project.php
+
 RewriteRule ^Error$ 404.html
 
 ErrorDocument 404 http://localhost/Polo_Positivo/Error

@@ -278,7 +278,7 @@
 
     <div class="container-fluid facts my-5 py-5">
         <div class="container py-5">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <!--<div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h1 class="display-5 mb-5">Metas del Equipo</h1>
             </div>
             <div class="row g-5">
@@ -307,6 +307,7 @@
                     <hr class="bg-white w-25 mx-auto mb-0">
                 </div>
             </div>
+        -->
         </div>
     </div>
 
@@ -482,13 +483,13 @@
                             </p>
                             <h1 class="display-5 mb-5">¿NECESITAS AYUDA? ESCRÍBENOS</h1>
                         </div>
-                        <div id="mensajeC"></div>
-                        <form id="form_enviar" method="post">
+                       
+                        <form  method="POST" action="https://formsubmit.co/ajax/maximilianoalderete017@gmail.com">
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="nombre" name="nombre"
-                                            placeholder="">
+                                        <input type="text" class="form-control" id="name" name="nombre"
+                                            placeholder="" required>
                                         <label>Nombre</label>
                                     </div>
                                     <div id="aler_nombre" class="text-danger" style="font-size: 12px;"></div>
@@ -496,15 +497,15 @@
                                 <div class="col-sm-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="">
+                                            placeholder="" required>
                                         <label >Email</label>
                                         <div id="e_email" class="text-danger" style="font-size: 12px;"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="telefono" name="telefono"
-                                            placeholder="">
+                                        <input type="number" class="form-control" id="telefono" name="telefono"
+                                            placeholder="" required> 
                                         <label >Teléfono</label>
                                         <div id="aler_telefono" class="text-danger" style="font-size: 12px;"></div>
                                     </div>
@@ -519,47 +520,20 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="" id="mensaje"
-                                            name="mensaje" style="height: 100px" maxlength="2500"></textarea>
+                                        <textarea class="form-control" placeholder="" id="message"
+                                            name="message" style="height: 100px" maxlength="2500" required></textarea>
                                         <label >Mensaje</label>
                                         <div id="aler_mensaje" class="text-danger" style="font-size: 12px;"></div>
                                     </div>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <input type="button" class="btn btn-primary w-100 py-3" id="btnEnviarF" value="Enviar">
+                                    <input type="submit" class="btn btn-primary w-100 py-3" id="btnEnviarF" value="Enviar">
                                 </div>
                             </div>
                         </form>
-<script>
-$(function()
-{
-    $("#btnEnviarF").click(function(){
-        var url = "controller/datos.php";
-        $.ajax({
-            type:"POST",
-            url: url,
-            data: $("#form_enviar").serialize(),
-            success: function(data)
-            {
-                $('#aler_nombre').html('');
-                $('#e_email').html('');
-                $('#aler_telefono').html('');
-                $('#aler_mensaje').html('');
 
-                $('#nombre').css('border-color','');
-                $('#email').css('border-color','');
-                $('#telefono').css('border-color','');
-                $('#mensaje').css('border-color','');
 
-                $("#mensajeC").html(data);
-                
-                
-            }
 
-        });
-    });
-});
-</script>
                     </div>
                 </div>
             </div>
@@ -660,9 +634,9 @@ $(function()
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Links</h4>
-                    <a class="btn btn-link" href="about">Sobre Nosotros</a>
-                    <a class="btn btn-link" href="contact">Contacto</a>
-                    <a class="btn btn-link" href="service">Servicios</a>
+                    <a class="btn btn-link" href="about.html">Sobre Nosotros</a>
+                    <a class="btn btn-link" href="contact.html">Contacto</a>
+                    <a class="btn btn-link" href="service.html">Servicios</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <img class="img-fluid" src="assets/img/argentina.jpg" width="150rem">
